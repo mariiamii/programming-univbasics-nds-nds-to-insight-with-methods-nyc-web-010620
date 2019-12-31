@@ -5,12 +5,12 @@ require 'directors_database'
 # using director_data as input
 
 def gross_for_director(director_data)
-  i = 0 # movie index
+  movie_index = 0 # movie index
   total = 0 # total for this director 
  
-  while i < director_data[:movies].length do 
-    total += director_data[:movies][i][:worldwide_gross]
-    i += 1
+  while movie_index < director_data[:movies].length do 
+    total += director_data[:movies][movie_index][:worldwide_gross]
+    movie_index += 1
   end
   total
 end
@@ -19,8 +19,9 @@ end
 # The return value should be like:
 #
 # { directorOne => allTheMoneyTheyMade, ... }
+
 def directors_totals(nds)
-  result = {} # new hash
+  result = {}
   i = 0 # index of the director
   
   # take the name of the director
