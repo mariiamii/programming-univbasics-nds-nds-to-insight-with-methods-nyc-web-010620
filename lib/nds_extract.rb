@@ -12,6 +12,17 @@ end
 #
 # { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(nds)
-  result = {}
-  nil
+  result = {} # new hash
+  i = 0 # index of the director
+  
+  # take the name of the director
+  # pass that name to the gross_for_director method
+  # get the return from that method and pass it into the new hash result
+  # loop for the other directors i++
+  
+  while i<nds.length do
+    result[nds[i][:name]] = gross_for_director(nds[i])
+    i += 1
+  end
+  result
 end
