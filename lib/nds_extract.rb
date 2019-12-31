@@ -6,12 +6,9 @@ require 'directors_database'
 
 def gross_for_director(director_data)
   i = 0 # movie index
-  total = 0 # total for this direcotr
-  
-# iterate through each movie director_data[:movies][i]
-# find the worldwide gross for that movie director_data[:movies][i][:worldwide_gross]
-# and add it into the total var
-  while i<director_data[:movies].length do #do a loop for the number of movies
+  total = 0 # total for this director 
+ 
+  while i < director_data[:movies].length do 
     total += director_data[:movies][i][:worldwide_gross]
     i += 1
   end
